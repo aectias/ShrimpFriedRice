@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfg4sor4sotk6"]
+[gd_scene load_steps=8 format=3 uid="uid://cfg4sor4sotk6"]
 
 [ext_resource type="Script" path="res://World/World.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dxeva15lnv7wm" path="res://Platforms/TileMap.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="4"]
 [ext_resource type="PackedScene" uid="uid://dyq8g35t6hsjf" path="res://Platforms/MovingPlatform.tscn" id="5"]
 [ext_resource type="PackedScene" uid="uid://cqindn5hr3fl7" path="res://Platforms/CirclePlatform.tscn" id="6"]
+[ext_resource type="PackedScene" path="res://GridBase.tscn" id="6_7xr1e"]
 [ext_resource type="Texture2D" uid="uid://dr1i2ihtjbxfl" path="res://GRID_TRANSPARENT.png" id="7_q7k54"]
 
 [node name="World" type="Node2D"]
@@ -44,10 +45,7 @@ move_to = Vector2(-160, 0)
 [node name="CirclePlatform" parent="Platforms" instance=ExtResource("6")]
 position = Vector2(512, 608)
 
-[node name="GridTransparent" type="Sprite2D" parent="."]
-position = Vector2(-3040, 1152)
-scale = Vector2(1.568, 1.568)
-texture = ExtResource("7_q7k54")
+[node name="GridTransparent" parent="." instance=ExtResource("6_7xr1e")]
 
 [node name="GridTransparent3" type="Sprite2D" parent="."]
 position = Vector2(-1440, 1152)

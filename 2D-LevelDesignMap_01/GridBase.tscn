@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6mehdilikuyg"]
+
+[ext_resource type="Texture2D" uid="uid://dr1i2ihtjbxfl" path="res://GRID_TRANSPARENT.png" id="1_yw42v"]
+
+[node name="GridTransparent" type="Sprite2D"]
+position = Vector2(-3040, 1152)
+scale = Vector2(1.568, 1.568)
+texture = ExtResource("1_yw42v")
