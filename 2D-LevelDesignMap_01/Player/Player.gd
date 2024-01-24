@@ -36,6 +36,11 @@ var x_dir := 1
 var jump_coyote_timer : float = 0
 var jump_buffer_timer : float = 0
 var is_jumping := false
+
+const Rocket = preload("res://Rocket.tscn")
+var rocket_timer : float = 0
+const rocket_timer_max : float = 0.5
+var explosion_vector = Vector2(0,0);
 # ----------------------------------- #
 
 
@@ -46,7 +51,8 @@ func get_input() -> Dictionary:
 		"y": int(Input.is_action_pressed("ui_down")) - int(Input.is_action_pressed("ui_up")),
 		"just_jump": Input.is_action_just_pressed("jump") == true,
 		"jump": Input.is_action_pressed("jump") == true,
-		"released_jump": Input.is_action_just_released("jump") == true
+		"released_jump": Input.is_action_just_released("jump") == true,
+		"just_shoot": Input.is_action_just_pressed("shoot") == true
 	}
 
 
@@ -54,10 +60,27 @@ func _physics_process(delta: float) -> void:
 	x_movement(delta)
 	jump_logic(delta)
 	apply_gravity(delta)
+	update_explosion_velocity(delta)
 	
 	timers(delta)
 	move_and_slide()
+	shoot(delta)
+	
+func update_explosion_velocity(delta: float) -> void:
+	velocity += explosion_vector;
+	explosion_vector *= 0.9;
 
+func shoot(delta: float) -> void: 
+	if get_input()["just_shoot"]:
+		print_debug("shooting!")
+		var r = Rocket.instantiate()
+		r.transform = transform
+		var mouse_pos = get_global_mouse_position() - position
+		var unit_vector = mouse_pos.normalized()
+		r.velocity = unit_vector * r.speed
+		r.position += unit_vector * 50
+		get_parent().add_child(r)
+	return
 
 func x_movement(delta: float) -> void:
 	x_dir = get_input()["x"]
