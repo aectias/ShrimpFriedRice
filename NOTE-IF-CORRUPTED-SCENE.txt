@@ -1,0 +1,1 @@
+Duplicate the scene in the file explorer - not in the Godot editor. Open the scene (it fixed one of my corrupted scenes when it was just duplicated??) and save the duplicated scene as the original. It should fix it as of 4.2 https://github.com/godotengine/godot/issues/79545#issuecomment-1814494146

@@ -1,12 +1,7 @@
-res://World/World.tscn
 res://Platforms/TileMap.tscn
-res://Player/Player.tscn
-res://ScreenCamera/ScreenCamera.tscn
-res://Platforms/MovingPlatform.tscn
-res://Player/Player.gd
-res://rocket.tscn
-res://rocket.gd
 res://Rocket.tscn
-res://Rocket.gd
 res://Explosion.tscn
-res://Explosion.gd
+res://Player/Player.tscn
+res://World/World.tscn
+res://GridBase.tscn
+res://Levels/Metrics_Gym.tscn
