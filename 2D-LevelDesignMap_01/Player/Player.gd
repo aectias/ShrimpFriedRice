@@ -40,7 +40,6 @@ var is_jumping := false
 const Rocket = preload("res://Rocket.tscn")
 var rocket_timer : float = 0
 const rocket_timer_max : float = 0.5
-var explosion_vector = Vector2(0,0);
 # ----------------------------------- #
 
 
@@ -60,15 +59,10 @@ func _physics_process(delta: float) -> void:
 	x_movement(delta)
 	jump_logic(delta)
 	apply_gravity(delta)
-	update_explosion_velocity(delta)
 	
 	timers(delta)
 	move_and_slide()
 	shoot(delta)
-	
-func update_explosion_velocity(delta: float) -> void:
-	velocity += explosion_vector;
-	explosion_vector *= 0.9;
 
 func shoot(delta: float) -> void: 
 	if get_input()["just_shoot"]:

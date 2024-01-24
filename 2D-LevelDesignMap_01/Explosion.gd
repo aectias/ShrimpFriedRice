@@ -2,7 +2,7 @@ extends Area2D
 
 var exploded = false;
 const Player = preload("res://Player/Player.tscn")
-const bomb_push_speed = 150;
+const bomb_push_speed = 750;
 const explosion_time_to_death = 1;
 const explosion_active_time = 0.2;
 var time_count = 0;
@@ -25,6 +25,6 @@ func _on_body_entered(body):
 	print_debug('test', body.position, position);
 	if not exploded:
 		if body is CharacterBody2D:
-			body.explosion_vector = (body.position - position).normalized() * bomb_push_speed
+			body.velocity += (body.position - position).normalized() * bomb_push_speed
 			exploded = true;
 	pass # Replace with function body.
