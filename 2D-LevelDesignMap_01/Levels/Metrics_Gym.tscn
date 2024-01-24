@@ -67,4 +67,62 @@ offset_top = 2352.0
 offset_right = -5696.0
 offset_bottom = 2752.0
 theme = SubResource("Theme_xhphv")
+bbcode_enabled = true
 text = "Metrics Gym"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -8723.0
+offset_top = 3687.0
+offset_right = -7923.0
+offset_bottom = 4087.0
+theme = SubResource("Theme_xhphv")
+bbcode_enabled = true
+text = "Horizontal 
+"
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -7347.0
+offset_top = 3687.0
+offset_right = -6547.0
+offset_bottom = 4087.0
+theme = SubResource("Theme_xhphv")
+bbcode_enabled = true
+text = "LIMIT
+w/o 
+rocket
+"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -2838.0
+offset_top = 3687.0
+offset_right = -2038.0
+offset_bottom = 4087.0
+theme = SubResource("Theme_xhphv")
+bbcode_enabled = true
+text = "LIMIT w/o rocket
+"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -6813.0
+offset_top = 3695.0
+offset_right = -6013.0
+offset_bottom = 4095.0
+theme = SubResource("Theme_xhphv")
+bbcode_enabled = true
+text = "Vertical"
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="."]
+modulate = Color(0, 0, 0, 1)
+offset_left = -5241.0
+offset_top = 3695.0
+offset_right = -4441.0
+offset_bottom = 4095.0
+theme = SubResource("Theme_xhphv")
+bbcode_enabled = true
+text = "Horizontal + Vertical
+
+"
