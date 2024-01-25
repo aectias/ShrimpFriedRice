@@ -1,6 +1,6 @@
 extends Area2D
 
-var speed = 600
+var speed = 1000
 var velocity = Vector2(0.0, 0.0)
 const Explosion = preload("res://Explosion.tscn")
 
