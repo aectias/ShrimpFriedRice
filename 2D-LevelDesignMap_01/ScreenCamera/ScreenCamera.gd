@@ -22,4 +22,4 @@ func _physics_process(_delta: float) -> void:
 
 # Calculating the gridnapped position
 func desired_position() -> Vector2:
-	return (Target.global_position / screen_size).floor() * screen_size + screen_size* 1/4 # originally screen_size/2
+	return (Target.global_position / screen_size).floor() * screen_size + screen_size * 1/2 # originally screen_size/2

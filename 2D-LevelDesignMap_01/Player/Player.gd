@@ -24,7 +24,7 @@ var x_dir := 1
 # ------------- #
 
 # JUMP VARAIABLES ------------------- #
-@export var jump_force : float = 1400
+@export var jump_force : float = 1000
 @export var jump_cut : float = 0.25
 @export var jump_gravity_max : float = 500
 @export var jump_hang_treshold : float = 2.0
