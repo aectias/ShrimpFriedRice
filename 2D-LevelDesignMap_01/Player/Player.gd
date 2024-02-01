@@ -6,7 +6,7 @@ extends CharacterBody2D
 ## Beyond coyote time and a jump buffer I go through all the things listed in the following video:
 ## https://www.youtube.com/watch?v=2S3g8CgBG1g
 ## Except for separate air and ground acceleration, as I don't think it's necessary.
-
+ 
 
 # BASIC MOVEMENT VARAIABLES ---------------- #
 var face_direction := 1

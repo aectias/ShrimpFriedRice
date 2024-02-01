@@ -1,7 +1,7 @@
 extends Area2D
 
 var exploded = false;
-const Player = preload("res://Player/Player.tscn")
+# const Player = preload("res://Player/Player.tscn")
 const bomb_push_speed = 750;
 const explosion_time_to_death = 1;
 const explosion_active_time = 0.2;
@@ -10,7 +10,7 @@ var time_count = 0;
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
-
+ 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

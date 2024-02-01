@@ -8,7 +8,7 @@ const Explosion = preload("res://Explosion.tscn")
 func _ready():
 	pass # Replace with function body.
 
-
+ 
 func _physics_process(delta):
 	position += velocity * delta;
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bh7y4xxd52p2p"]
 
 [ext_resource type="Script" path="res://World/World.gd" id="1_dyn6v"]
-[ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="2_i8d84"]
+[ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="2_tsdo3"]
 [ext_resource type="PackedScene" uid="uid://dxeva15lnv7wm" path="res://Platforms/TileMap.tscn" id="3_rgcws"]
 [ext_resource type="PackedScene" uid="uid://dvdme67fid0so" path="res://Collectibles.tscn" id="4_gjgt5"]
 [ext_resource type="PackedScene" uid="uid://c6mehdilikuyg" path="res://GridBase.tscn" id="5_7nq3a"]
@@ -18,9 +18,8 @@ scale = Vector2(1, 1.36541)
 color = Color(0.101961, 0.0901961, 0.286275, 1)
 metadata/_edit_lock_ = true
 
-[node name="Player" parent="." instance=ExtResource("2_i8d84")]
+[node name="Player" parent="." instance=ExtResource("2_tsdo3")]
 position = Vector2(-8714, 3650)
-jump_force = 1000.0
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(1.2, 1.2)
