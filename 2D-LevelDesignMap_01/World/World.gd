@@ -47,3 +47,8 @@ func swap_fullscreen_mode():
 func _on_ready():
 	playerNode.collectible_collected.connect(updateCount)
 	pass # Replace with function body.
+
+
+func _on_bgm_finished():
+	$BGM.play()
+	pass # Replace with function body.

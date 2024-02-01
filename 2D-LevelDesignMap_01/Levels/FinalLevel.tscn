@@ -390,3 +390,4 @@ position = Vector2(5407, 1311)
 position = Vector2(2845, 605)
 
 [connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="finished" from="BGM" to="." method="_on_bgm_finished"]
