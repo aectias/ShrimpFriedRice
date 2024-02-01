@@ -1,18 +1,71 @@
-[gd_scene load_steps=11 format=3 uid="uid://bh7y4xxd52p2p"]
+[gd_scene load_steps=14 format=3 uid="uid://bh7y4xxd52p2p"]
 
 [ext_resource type="Script" path="res://World/World.gd" id="1_dyn6v"]
 [ext_resource type="Texture2D" uid="uid://bd4anjw8tj7kh" path="res://Art/Wok.png" id="2_1ii06"]
 [ext_resource type="Texture2D" uid="uid://b0xsayp8cbh4d" path="res://Art/Buddy.png" id="2_2jvv5"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="2_tsdo3"]
+[ext_resource type="Texture2D" uid="uid://xq46gqfyaaox" path="res://Art/Carrots.png" id="2_uslou"]
+[ext_resource type="Texture2D" uid="uid://bdcc7nhpk5e02" path="res://Art/Peas.png" id="3_polco"]
 [ext_resource type="PackedScene" uid="uid://dxeva15lnv7wm" path="res://Platforms/TileMap.tscn" id="3_rgcws"]
 [ext_resource type="PackedScene" uid="uid://dbtvj2v1d5pi4" path="res://Collectibles/Carrots.tscn" id="5_7hqkc"]
 [ext_resource type="PackedScene" uid="uid://c6mehdilikuyg" path="res://GridBase.tscn" id="5_7nq3a"]
 [ext_resource type="PackedScene" uid="uid://qloe28slxy84" path="res://Collectibles/GreenOnions.tscn" id="6_fvd5n"]
 [ext_resource type="PackedScene" uid="uid://dmrppi1ebg03x" path="res://Collectibles/Peas.tscn" id="7_ixn0d"]
 [ext_resource type="PackedScene" uid="uid://vvavyg2784qc" path="res://Collectibles/Tomato.tscn" id="8_xu7of"]
+[ext_resource type="PackedScene" uid="uid://bt5c2018t4574" path="res://Collectibles/Rice.tscn" id="12_b2h4y"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_dyn6v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+offset_right = 520.0
+offset_bottom = 402.0
+
+[node name="hud-carrots" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/hud-carrots"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("2_uslou")
+
+[node name="name" type="Label" parent="CanvasLayer/HBoxContainer/hud-carrots"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Carrots"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="CanvasLayer/HBoxContainer/hud-carrots"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "0/2"
+horizontal_alignment = 1
+
+[node name="hud-peas" type="VBoxContainer" parent="CanvasLayer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/HBoxContainer/hud-peas"]
+layout_mode = 2
+size_flags_horizontal = 0
+texture = ExtResource("3_polco")
+
+[node name="name" type="Label" parent="CanvasLayer/HBoxContainer/hud-peas"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Peas"
+horizontal_alignment = 1
+
+[node name="count" type="Label" parent="CanvasLayer/HBoxContainer/hud-peas"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "0/2"
+horizontal_alignment = 1
 
 [node name="Background" type="ColorRect" parent="."]
 offset_left = -9409.0
@@ -120,5 +173,8 @@ position = Vector2(-1378, 2533)
 [node name="Peas5" parent="." instance=ExtResource("7_ixn0d")]
 position = Vector2(-2950, 2594)
 
-[node name="Carrots5" parent="." instance=ExtResource("5_7hqkc")]
-position = Vector2(-7058, 2919)
+[node name="Carrots5" parent="." instance=ExtResource("12_b2h4y")]
+position = Vector2(-7064, 2917)
+
+[node name="Carrots6" parent="." instance=ExtResource("12_b2h4y")]
+position = Vector2(-4649, 4389)
