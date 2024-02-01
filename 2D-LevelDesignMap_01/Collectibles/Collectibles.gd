@@ -1,6 +1,5 @@
 extends Area2D
 
-
 # GRAVITY ----- #
 @export var gravity_acceleration : float = 3840
 @export var gravity_max : float = 1020
@@ -8,6 +7,15 @@ extends Area2D
 
 var velocity = Vector2(0,0);
 var is_falling = true;
+
+enum colEnum {
+	Carrots,
+	GreenOnion,
+	Peas,
+	Tomato
+}
+
+@export var collectible_type : colEnum;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvdme67fid0so"]
+
+[ext_resource type="Script" path="res://Collectibles/Collectibles.gd" id="1_xlt8h"]
+[ext_resource type="Texture2D" uid="uid://bdcc7nhpk5e02" path="res://Art/Peas.png" id="2_lynd3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wr5h"]
+size = Vector2(50, 50)
+
+[node name="Collectibles" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_xlt8h")
+collectible_type = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_lynd3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4wr5h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

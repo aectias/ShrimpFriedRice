@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://qloe28slxy84"]
+
+[ext_resource type="Script" path="res://Collectibles/Collectibles.gd" id="1_oicto"]
+[ext_resource type="Texture2D" uid="uid://bi0fkik3i1s37" path="res://Art/GreenOnion.png" id="2_nqsph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4wr5h"]
+size = Vector2(50, 50)
+
+[node name="GreenOnion" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_oicto")
+collectible_type = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nqsph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_4wr5h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

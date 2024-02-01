@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b0xsayp8cbh4d" path="res://Art/Buddy.png" id="2_bwpbi"]
 [ext_resource type="PackedScene" uid="uid://cvboky6pqlyk0" path="res://Player/Player.tscn" id="2_xelmt"]
 [ext_resource type="PackedScene" uid="uid://dxeva15lnv7wm" path="res://Platforms/TileMap.tscn" id="3_5vg5h"]
-[ext_resource type="PackedScene" uid="uid://dvdme67fid0so" path="res://Collectibles.tscn" id="4_8ne30"]
+[ext_resource type="PackedScene" uid="uid://dvdme67fid0so" path="res://Collectibles/Collectibles.tscn" id="4_8ne30"]
 [ext_resource type="PackedScene" uid="uid://c6mehdilikuyg" path="res://GridBase.tscn" id="4_dvoco"]
 
 [node name="Node2D" type="Node2D"]
