@@ -24,6 +24,7 @@ func _process(delta):
 func _on_body_entered(body):
 	if not exploded:
 		if body is CharacterBody2D:
+			$pop.play()
 			body.velocity += (body.position - position).normalized() * bomb_push_speed
 			exploded = true;
 	pass # Replace with function body.

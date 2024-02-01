@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bini323prdc2w"]
+[gd_scene load_steps=6 format=3 uid="uid://bini323prdc2w"]
 
 [ext_resource type="Script" path="res://Explosion.gd" id="1_fjoep"]
 [ext_resource type="Texture2D" uid="uid://b8x3rv8tdlcbm" path="res://Art/Circle.png" id="2_3n8n8"]
+[ext_resource type="AudioStream" uid="uid://blon0k67g68ll" path="res://Audio/245646__unfa__cartoon-pop-distorted.wav" id="3_c2xh4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1jea"]
 radius = 161.05
@@ -33,5 +34,8 @@ scale_amount_min = 0.02
 scale_amount_max = 0.08
 color = Color(0.964706, 0.321569, 0.294118, 1)
 color_ramp = SubResource("Gradient_l1x7t")
+
+[node name="pop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_c2xh4")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

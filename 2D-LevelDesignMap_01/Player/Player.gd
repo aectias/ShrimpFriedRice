@@ -67,7 +67,6 @@ func _physics_process(delta: float) -> void:
 
 func shoot(delta: float) -> void: 
 	if get_input()["just_shoot"]:
-		print_debug("shooting!")
 		var r = Rocket.instantiate()
 		r.transform = transform
 		var mouse_pos = get_global_mouse_position() - position
@@ -75,6 +74,7 @@ func shoot(delta: float) -> void:
 		r.velocity = unit_vector * r.speed
 		r.position += unit_vector * 50
 		get_parent().add_child(r)
+		$pew.play()
 	return
 
 func x_movement(delta: float) -> void:
@@ -174,4 +174,5 @@ func timers(delta: float) -> void:
 	jump_buffer_timer -= delta
 
 func collected(colType: int):
+	$collected.play()
 	collectible_collected.emit(colType)

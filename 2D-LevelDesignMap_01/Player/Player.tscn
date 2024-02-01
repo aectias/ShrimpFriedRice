@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvboky6pqlyk0"]
+[gd_scene load_steps=12 format=3 uid="uid://cvboky6pqlyk0"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_pctqh"]
 [ext_resource type="Script" path="res://Player/Sprite.gd" id="2_c8xgd"]
 [ext_resource type="Texture2D" uid="uid://dcpdkbhnyr5nr" path="res://Art/ShrimpSprite.png" id="3_4r73l"]
+[ext_resource type="AudioStream" uid="uid://ceovwkv6l5opf" path="res://Audio/458906__matrixxx__retro-bubble-shot-01.wav" id="4_vncee"]
+[ext_resource type="AudioStream" uid="uid://ciequhmdd13uv" path="res://Audio/478647__phenala__coin-pickup.mp3" id="5_dlcyg"]
 
 [sub_resource type="RectangleShape2D" id="2"]
 size = Vector2(49.5, 46)
@@ -110,3 +112,9 @@ libraries = {
 position = Vector2(0, -19)
 scale = Vector2(0.23, 0.23)
 texture = ExtResource("3_4r73l")
+
+[node name="pew" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_vncee")
+
+[node name="collected" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dlcyg")

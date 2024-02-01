@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bh7y4xxd52p2p"]
+[gd_scene load_steps=22 format=3 uid="uid://bh7y4xxd52p2p"]
 
 [ext_resource type="Script" path="res://World/World.gd" id="1_dyn6v"]
 [ext_resource type="Texture2D" uid="uid://bd4anjw8tj7kh" path="res://Art/Wok.png" id="2_1ii06"]
@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c6s8a02ohx0xn" path="res://Art/Tomato.png" id="6_s12jv"]
 [ext_resource type="PackedScene" uid="uid://dmrppi1ebg03x" path="res://Collectibles/Peas.tscn" id="7_ixn0d"]
 [ext_resource type="Texture2D" uid="uid://bphigjyncivll" path="res://Art/Rice.png" id="7_j68wy"]
+[ext_resource type="AudioStream" uid="uid://ceg3qedk7wm32" path="res://Audio/679355__kjartan_abel__pawsome-vibes-get-your-groove-on-with-meow-meow.wav" id="8_fhe4q"]
 [ext_resource type="PackedScene" uid="uid://vvavyg2784qc" path="res://Collectibles/Tomato.tscn" id="8_xu7of"]
 [ext_resource type="Texture2D" uid="uid://nmiwk5sektlw" path="res://Art/sunglasses.png" id="9_uw166"]
 [ext_resource type="Script" path="res://Levels/cat.gd" id="9_vk8wk"]
@@ -211,6 +212,11 @@ offset_bottom = 2615.0
 scale = Vector2(1, 1.36541)
 color = Color(0.678431, 0.34902, 0.411765, 1)
 metadata/_edit_lock_ = true
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_fhe4q")
+volume_db = -11.0
+autoplay = true
 
 [node name="Buddy" type="Sprite2D" parent="."]
 position = Vector2(780, 1802)
