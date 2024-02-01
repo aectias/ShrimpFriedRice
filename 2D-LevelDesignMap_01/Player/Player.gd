@@ -27,7 +27,7 @@ var x_dir := 1
 @export var jump_force : float = 1000
 @export var jump_cut : float = 0.25
 @export var jump_gravity_max : float = 500
-@export var jump_hang_treshold : float = 2.0
+@export var jump_hang_treshold : float = 10.0
 @export var jump_hang_gravity_mult : float = 0.1
 # Timers
 @export var jump_coyote : float = 0.08
@@ -42,6 +42,7 @@ var rocket_timer : float = 0
 const rocket_timer_max : float = 0.5
 # ----------------------------------- #
 
+signal collectible_collected(colType)
 
 # All iputs we want to keep track of
 func get_input() -> Dictionary:
@@ -172,3 +173,5 @@ func timers(delta: float) -> void:
 	jump_coyote_timer -= delta
 	jump_buffer_timer -= delta
 
+func collected(colType: int):
+	collectible_collected.emit(colType)

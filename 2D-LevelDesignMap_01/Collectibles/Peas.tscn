@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmrppi1ebg03x"]
+[gd_scene load_steps=7 format=3 uid="uid://dmrppi1ebg03x"]
 
 [ext_resource type="Script" path="res://Collectibles/Collectibles.gd" id="1_ujiy3"]
 [ext_resource type="Material" uid="uid://cqv21nkwbspwr" path="res://Collectibles/Outline.tres" id="2_0rajs"]
 [ext_resource type="Texture2D" uid="uid://bdcc7nhpk5e02" path="res://Art/Peas.png" id="2_gto0k"]
+[ext_resource type="Texture2D" uid="uid://bgwfeat4ggqog" path="res://Art/sparkle.png" id="4_jpaox"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wr5h"]
 size = Vector2(50, 50)
+
+[sub_resource type="Gradient" id="Gradient_jodma"]
+colors = PackedColorArray(1, 0.894118, 0, 1, 1, 1, 1, 0)
 
 [node name="Peas" type="Area2D"]
 collision_layer = 3
@@ -20,6 +24,16 @@ texture = ExtResource("2_gto0k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4wr5h")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture = ExtResource("4_jpaox")
+emission_shape = 1
+emission_sphere_radius = 45.0
+gravity = Vector2(0, -200)
+angular_velocity_min = -25.0
+scale_amount_min = 0.02
+scale_amount_max = 0.05
+color_ramp = SubResource("Gradient_jodma")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

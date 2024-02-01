@@ -44,10 +44,8 @@ func apply_gravity(delta: float) -> void:
 	pass
 
 func _on_body_entered(body):
-	#print_debug("body... ", body);
-	#if body is TileMap and is_falling:
-	#	is_falling = false
 	if body is CharacterBody2D:
+		body.collected(collectible_type);
 		queue_free()
 	pass
 

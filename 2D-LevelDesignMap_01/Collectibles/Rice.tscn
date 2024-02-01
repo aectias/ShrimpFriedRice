@@ -1,16 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://bt5c2018t4574"]
+[gd_scene load_steps=7 format=3 uid="uid://bt5c2018t4574"]
 
 [ext_resource type="Script" path="res://Collectibles/Collectibles.gd" id="1_at0my"]
 [ext_resource type="Material" uid="uid://cqv21nkwbspwr" path="res://Collectibles/Outline.tres" id="2_leutl"]
 [ext_resource type="Texture2D" uid="uid://bphigjyncivll" path="res://Art/Rice.png" id="2_sqb6h"]
+[ext_resource type="Texture2D" uid="uid://bgwfeat4ggqog" path="res://Art/sparkle.png" id="4_exs6s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wr5h"]
 size = Vector2(50, 50)
+
+[sub_resource type="Gradient" id="Gradient_5mlrm"]
+colors = PackedColorArray(1, 0.894118, 0, 1, 1, 1, 1, 0)
 
 [node name="Carrots" type="Area2D"]
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_at0my")
+collectible_type = 4
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = ExtResource("2_leutl")
@@ -19,6 +24,16 @@ texture = ExtResource("2_sqb6h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_4wr5h")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture = ExtResource("4_exs6s")
+emission_shape = 1
+emission_sphere_radius = 45.0
+gravity = Vector2(0, -200)
+angular_velocity_min = -25.0
+scale_amount_min = 0.02
+scale_amount_max = 0.05
+color_ramp = SubResource("Gradient_5mlrm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
