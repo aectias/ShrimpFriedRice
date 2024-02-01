@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dbtvj2v1d5pi4"]
+[gd_scene load_steps=5 format=3 uid="uid://dbtvj2v1d5pi4"]
 
 [ext_resource type="Script" path="res://Collectibles/Collectibles.gd" id="1_ckxms"]
 [ext_resource type="Texture2D" uid="uid://xq46gqfyaaox" path="res://Art/Carrots.png" id="2_61ms2"]
+[ext_resource type="Material" uid="uid://cqv21nkwbspwr" path="res://Collectibles/Outline.tres" id="2_uyub6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wr5h"]
 size = Vector2(50, 50)
@@ -12,6 +13,7 @@ collision_mask = 3
 script = ExtResource("1_ckxms")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_uyub6")
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_61ms2")
 

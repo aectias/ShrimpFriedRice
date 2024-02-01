@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bt5c2018t4574"]
+[gd_scene load_steps=5 format=3 uid="uid://bt5c2018t4574"]
 
 [ext_resource type="Script" path="res://Collectibles/Collectibles.gd" id="1_at0my"]
+[ext_resource type="Material" uid="uid://cqv21nkwbspwr" path="res://Collectibles/Outline.tres" id="2_leutl"]
 [ext_resource type="Texture2D" uid="uid://bphigjyncivll" path="res://Art/Rice.png" id="2_sqb6h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4wr5h"]
@@ -12,6 +13,7 @@ collision_mask = 3
 script = ExtResource("1_at0my")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_leutl")
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_sqb6h")
 
