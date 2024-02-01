@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bini323prdc2w"]
+[gd_scene load_steps=7 format=3 uid="uid://bini323prdc2w"]
 
 [ext_resource type="Script" path="res://Explosion.gd" id="1_fjoep"]
 [ext_resource type="Texture2D" uid="uid://b8x3rv8tdlcbm" path="res://Art/Circle.png" id="2_3n8n8"]
+[ext_resource type="Texture2D" uid="uid://d25cle3r2wf47" path="res://Art/Circle-salmon.png" id="2_xlsy8"]
 [ext_resource type="AudioStream" uid="uid://blon0k67g68ll" path="res://Audio/245646__unfa__cartoon-pop-distorted.wav" id="3_c2xh4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m1jea"]
@@ -16,7 +17,7 @@ script = ExtResource("1_fjoep")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_3n8n8")
+texture = ExtResource("2_xlsy8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m1jea")

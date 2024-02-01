@@ -9,6 +9,7 @@ var time_count = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$pop.play()
 	pass # Replace with function body.
  
 
@@ -24,7 +25,6 @@ func _process(delta):
 func _on_body_entered(body):
 	if not exploded:
 		if body is CharacterBody2D:
-			$pop.play()
 			body.velocity += (body.position - position).normalized() * bomb_push_speed
 			exploded = true;
 	pass # Replace with function body.
