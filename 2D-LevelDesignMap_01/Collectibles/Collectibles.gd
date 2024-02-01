@@ -12,7 +12,8 @@ enum colEnum {
 	Carrots,
 	GreenOnion,
 	Peas,
-	Tomato
+	Tomato,
+	Rice
 }
 
 @export var collectible_type : colEnum;
